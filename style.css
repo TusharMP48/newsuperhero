@@ -1,0 +1,325 @@
+/* ===============================
+   Reset & Globals
+   =============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-image: url("4K Wallpaper For Pc Spider Man Gallery.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+/* ===============================
+   Navbar
+   =============================== */
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo img {
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 150px;
+  border-radius: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  background-color: #f00;
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links li a:hover {
+  transform: rotateY(10deg) rotateX(-10deg);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.nav-links li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: perspective(300px) rotateY(-10deg) rotateX(10deg) translateZ(-20px);
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover::before {
+  transform: perspective(300px) rotateY(0) rotateX(0) translateZ(-20px);
+}
+
+/* ===============================
+   Hero Section
+   =============================== */
+.hero-section {
+  padding: 60px 20px;
+}
+
+.header-main-title {
+  color: #00ffe7;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.character-search-box {
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+.search-character-button {
+  padding: 10px 20px;
+  background-color: #ed462f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ===============================
+   Content Container
+   =============================== */
+.content-container {
+  padding: 40px 20px;
+}
+
+/* ===============================
+   Character Card Grid
+   =============================== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #ed462f;
+}
+
+.card-body {
+  margin-top: 10px;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #00ffe7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title i {
+  color: #ed462f;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card-title i:hover {
+  transform: scale(1.3);
+  color: #ff6659;
+}
+
+/* ===============================
+   Character Full Detail Layout
+   =============================== */
+.character-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  overflow: hidden;
+}
+
+.character-img {
+  flex: 0 0 250px;
+  border-radius: 10px;
+}
+
+.character-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 3px solid #ed462f;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.character-info {
+  flex: 1;
+  min-width: 200px;
+  text-align: justify;
+}
+
+.character-info h3 {
+  color: #00ffe7;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.character-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.character-meta {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+/* ===============================
+   Comic Grid Layout
+   =============================== */
+.comics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.comics-grid .card {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.comics-grid .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.comics-grid .card-img-top {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.comics-grid .card-body {
+  padding: 15px;
+}
+
+.comics-grid .card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #00ffe7;
+}
+
+.comics-grid .card-text {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.comics-grid .card-footer {
+  background: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.8rem;
+  color: #aaa;
+  padding: 10px 15px;
+}
+
+/* ===============================
+   Responsive Layout
+   =============================== */
+@media screen and (max-width: 768px) {
+  .character-search-box {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .character-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .character-img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .character-info {
+    width: 100%;
+    text-align: justify;
+  }
+}

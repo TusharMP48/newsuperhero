@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marvel Favourites</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadFavourites()">
+
+  <nav class="custom-navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="https://1000logos.net/wp-content/uploads/2021/06/Marvel-Comics-logo.png" alt="Marvel Logo"/>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Characters</a></li>
+        <li><a href="#" class="active">Favourites</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <h1 class="header-main-title">Your Favourite Heroes</h1>
+  </section>
+
+  <main class="content-container">
+    <div id="cards-group" class="card-grid"></div>
+  </main>
+
+  <script src="favourites.js"></script>
+</body>
+</html>
